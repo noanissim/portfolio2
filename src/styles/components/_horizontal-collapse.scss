@@ -1,0 +1,125 @@
+$transitionDurationMs: 0.5s;
+.v-application ul {
+   padding: 0;
+}
+.horizontal-collapse {
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   color: #fff;
+
+   &__inner {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+   }
+
+   &__item {
+      min-height: 42rem;
+      list-style: none;
+      padding: 0;
+      overflow: hidden;
+      // min-width: 10rem;
+      // max-width: 40rem;
+      position: relative;
+      border: 1px solid white;
+      transition: width $transitionDurationMs;
+
+      &--1 {
+         background-color: #80deea;
+      }
+
+      &--2 {
+         background-color: #b2dfdb;
+      }
+
+      &--3 {
+         background-color: #b2ebf2;
+      }
+
+      &--4 {
+         background-color: #cbf3fd;
+      }
+
+      &.is-active {
+         background-color: #82b1ff;
+         // color: #fff;
+
+         .horizontal-collapse__inactive-content {
+            opacity: 0;
+         }
+
+         .horizontal-collapse__active-content {
+            opacity: 1;
+         }
+      }
+   }
+
+   &__item-inner {
+      padding: 20px 0;
+   }
+
+   &__inactive-content {
+      opacity: 1;
+      transition: opacity $transitionDurationMs;
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+
+      .horizontal-collapse__heading {
+         user-select: none;
+         cursor: default;
+         font-size: 3em;
+         line-height: 0;
+         margin-bottom: 0;
+         writing-mode: vertical-rl;
+         text-orientation: mixed;
+         transform: rotate(180deg);
+      }
+   }
+
+   &__active-content {
+      opacity: 0;
+      transition: opacity $transitionDurationMs;
+      cursor: default;
+   }
+
+   &__heading {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      cursor: pointer;
+   }
+
+   &__body {
+      cursor: pointer;
+      margin-bottom: 2rem;
+      font-size: 1em;
+      p {
+         margin-bottom: 0;
+         margin-top: 16px;
+         text-decoration: underline;
+      }
+   }
+
+   &__link {
+      display: inline-block;
+      background-color: #fff;
+      color: #333;
+      text-decoration: none;
+      line-height: 1;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      font-size: 1.7rem;
+      font-weight: bold;
+   }
+
+   .v-responsive {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 0 auto;
+   }
+}

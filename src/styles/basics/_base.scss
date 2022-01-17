@@ -1,0 +1,91 @@
+* {
+   box-sizing: border-box;
+}
+
+html {
+   // font-family: Opensans, sans-serif;
+   // line-height: 1.8;
+}
+
+html,
+body {
+   // height: 100%;
+   color: aqua;
+}
+
+body {
+   // margin: 0;
+   // line-height: 20px;
+   // font-size: 14px;
+   // font-weight: 400;
+   // color: #172b4d;
+   // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+main {
+   // height: 100%;
+
+   // background-repeat: no-repeat;
+   // background-size: cover;
+   // background-position: center center;
+}
+
+#app {
+   font-family: Avenir, Helvetica, Arial, sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-align: center;
+   color: #2c3e50;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: 500;
+   margin: 0 0 8px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+   font-size: 16px;
+   line-height: 20px;
+}
+
+ol,
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+img {
+   width: 100%;
+}
+
+a {
+   color: #172b4d;
+   cursor: pointer;
+   text-decoration: none;
+   &:hover {
+      color: #091e42;
+   }
+   &:visited {
+      color: inherit;
+   }
+   &:active {
+      outline: 0;
+   }
+}
+
+input[type='search']:focus {
+   outline: 0;
+}
+
+button {
+   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+}

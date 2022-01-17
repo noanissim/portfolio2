@@ -1,0 +1,16 @@
+.form-section {
+   width: 60%;
+   max-width: 450px;
+   background-color: #8cb6e6;
+   border-radius: 15px;
+   padding: 10px;
+   margin: 20px auto;
+
+   .btn-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+   }
+}

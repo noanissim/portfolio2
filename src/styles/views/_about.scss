@@ -1,0 +1,70 @@
+.about-section {
+   background-image: linear-gradient(45deg, #e4e4e43f, #b9b9b91e), url('~@/assets/img/bgcs/bgc4.jpg');
+   //  background-image: url('~@/assets/img/bgc4.jpg');
+   //  background-image: url('https://media.giphy.com/media/7VzgMsB6FLCilwS30v/giphy-downsized-large.gif');
+   background-repeat: repeat-y;
+   background-size: cover;
+   height: 100vh;
+   position: relative;
+   .about-section-info {
+      .btn {
+         &:hover {
+            background-color: #cbf3fd;
+         }
+      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h1 {
+         color: rgb(66, 66, 66);
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         font-weight: 700;
+         font-size: 2.5em;
+         line-height: 1.2;
+         text-shadow: 3px 3px rgba(0, 0, 0, 0.185);
+         text-align: center;
+
+         overflow: hidden; /* Ensures the content is not revealed until the animation */
+         border-right: 0.15em solid #82b1ff; /* The typwriter cursor */
+         white-space: nowrap; /* Keeps the content on a single line */
+         margin: 0 auto 5px; /* Gives that scrolling effect as the typing happens */
+         letter-spacing: 0.15em; /* Adjust as needed */
+         animation: typing 2.5s steps(40, end), blink-caret 1s step-end infinite;
+      }
+      h2 {
+         color: rgb(66, 66, 66);
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         font-weight: 500;
+         font-size: 1.8em;
+         line-height: 1.2;
+         overflow: hidden; /* Ensures the content is not revealed until the animation */
+         border-right: 0.15em solid #82b1ff; /* The typwriter cursor */
+         white-space: normal; /* Keeps the content on a single line */
+         margin: 0 auto 5px; /* Gives that scrolling effect as the typing happens */
+         letter-spacing: 0.15em; /* Adjust as needed */
+         animation: typing 2.5s steps(40, end), blink-caret 1s step-end infinite;
+      }
+
+      /* The typing effect */
+      @keyframes typing {
+         from {
+            width: 0;
+         }
+         to {
+            width: 100%;
+         }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+         from,
+         to {
+            border-color: transparent;
+         }
+         50% {
+            border-color: #82b1ff;
+         }
+      }
+   }
+}
