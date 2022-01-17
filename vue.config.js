@@ -1,7 +1,7 @@
 module.exports = {
    transpileDependencies: ['vuetify'],
    // publicPath: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/'
-   publicPath: '/portfolio/'
+   publicPath: '/portfolio2/'
    // devServer: {
    //    host: '0.0.0.0',
    //    https: false,
