@@ -6,7 +6,6 @@ import store from './store'
 import router from './router'
 import VuePdfApp from 'vue-pdf-app'
 Vue.component('vue-pdf-app', VuePdfApp)
-
 Vue.config.productionTip = false
 
 //The accordion - rights reserved to https://github.com/yasinatesim/vue-horizontal-collapse

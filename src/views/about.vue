@@ -18,11 +18,8 @@
 </template>
 
 
-
 <script>
 export default {
-
-
    methods: {
       btnClicked() {
          this.$emit('btnClicked', 'projects')

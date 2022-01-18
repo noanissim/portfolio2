@@ -19,7 +19,6 @@ export default {
    async created() {
    },
    computed: {
-
    },
 }
 </script>

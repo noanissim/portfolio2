@@ -1,11 +1,4 @@
 <template>
-   <!-- <li class="project-preview-container">
-      <div class="project-preview-info">
-         <div>
-            <h3>{{ project.name }}</h3>
-         </div>
-      </div>
-   </li> -->
    <v-card
       class="project-preview-container mx-auto my-12"
       :loading="loading"
@@ -40,7 +33,11 @@
       </v-card-actions>
       <v-divider class="mx-4"></v-divider>
       <v-card-text>
-         <v-chip-group column>
+         <v-chip-group
+            column
+            active-class="blue accent-2 white--text"
+            v-model="selection"
+         >
             <v-chip v-for="(tool, idx) in project.tools" :key="idx">{{
                tool
             }}</v-chip>
@@ -56,18 +53,16 @@ export default {
    },
    data: () => ({
       loading: false,
-      selection: 1,
+      selection: 0,
       maxWidth: null
    }),
    computed: {
       getImg() {
          let url = `../assets/img/${this.project.imgUrl}`
-         console.log(url)
          return url
       }
    },
    mounted() {
-      // console.log(this.$vuetify.breakpoint.width)
       this.onResize()
       window.addEventListener('resize', this.onResize, { passive: true })
    },

@@ -8,11 +8,7 @@ export default new Vuex.Store({
    state: {
       projects: null
    },
-   getters: {
-      // getProjects(state) {
-      //    return state.projects
-      // }
-   },
+   getters: {},
    mutations: {
       setProjects(state, { projects }) {
          state.projects = projects
@@ -21,21 +17,17 @@ export default new Vuex.Store({
    actions: {
       async loadProjects({ commit }) {
          try {
-            console.log('here')
             const projects = await projectService.getProjects()
             commit({ type: 'setProjects', projects })
-            console.log('projects :>>', projects)
             return projects
          } catch (err) {
             console.log(err)
          }
       },
-      async ownloadCv({ commit }) {
+      async ownloadCv({}) {
          try {
             console.log('here download')
             const cv = await projectService.getProjects()
-            // commit({ type: 'setProjects', projects })
-            // console.log('projects :>>', projects)
             return cv
          } catch (err) {
             console.log(err)

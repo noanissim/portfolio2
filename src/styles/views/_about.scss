@@ -8,8 +8,10 @@
    position: relative;
    .about-section-info {
       .btn {
+         background-color: rgba(255, 255, 255, 0.555);
          &:hover {
             background-color: #cbf3fd;
+            // background-color: #94bbff;
          }
       }
       position: absolute;

@@ -1,8 +1,6 @@
 <template>
    <div>
       <v-app-bar class="app-header-nav" fixed elevate-on-scroll>
-         <!-- <v-toolbar-title href="/" text> Noa Nissim </v-toolbar-title> -->
-
          <img
             @click="linkClicked('about')"
             class="img-logo"
@@ -19,21 +17,20 @@
             </v-btn>
 
             <v-btn id="tech" @click="linkClicked('tech')" text>
-               <span class="mr-2">Technologies</span>
+               <span class="mr-2">Tech</span>
             </v-btn>
 
             <v-btn id="contact" @click="linkClicked('contact')" text>
                <span class="mr-2">Contact</span>
             </v-btn>
 
-            <!-- <v-btn id="cv" @click="linkClicked('cv')" text>
+            <v-btn id="cv" @click="linkClicked('cv')" text>
                <span class="mr-2">CV</span>
-            </v-btn> -->
+            </v-btn>
          </div>
          <v-menu v-if="isMobile" left bottom transition="slide-y-transition">
             <template v-slot:activator="{ on, attrs }">
                <v-btn icon v-bind="attrs" v-on="on">
-                  <!-- <v-icon>mdi-dots-vertical</v-icon> -->
                   <v-app-bar-nav-icon></v-app-bar-nav-icon>
                </v-btn>
             </template>
@@ -78,10 +75,10 @@ export default {
                name: 'Contact',
                link: 'contact'
             },
-            // {
-            //    name: 'CV',
-            //    link: 'cv'
-            // }
+            {
+               name: 'CV',
+               link: 'cv'
+            }
          ]
       }
    },

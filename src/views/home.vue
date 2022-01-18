@@ -1,10 +1,10 @@
 <template>
    <div class="home-section-main">
-      <!-- <router-view></router-view> -->
       <about @btnClicked="handleLink($event)" ref="about"></about>
       <projects ref="projects"></projects>
       <tech ref="tech"></tech>
       <contact ref="contact"></contact>
+      <cv ref="cv"></cv>
       <appFooter ref="appFooter"></appFooter>
    </div>
 </template>
@@ -15,6 +15,7 @@ import about from './about'
 import projects from './projects.vue'
 import tech from './tech.vue'
 import contact from './contact.vue'
+import cv from './cv.vue'
 export default {
    name: 'Home',
    props: ['link'],
@@ -24,13 +25,13 @@ export default {
       projects,
       tech,
       contact,
+      cv
    },
    created() {
 
    },
    methods: {
       handleLink(ev) {
-         console.log('ev', ev)
          this.$vuetify.goTo(this.$refs[ev], {
             duration: 500,
             offset: 50,
@@ -40,21 +41,14 @@ export default {
    },
    watch: {
       '$route.name': {
-         // immediate: true,
          deep: true,
          async handler() {
             try {
-               // this.$nextTick(() => {
                this.$vuetify.goTo(this.$refs[this.$route.name], {
                   duration: 500,
                   offset: 50,
                   easing: "easeInOutCubic",
                })
-               // })
-               // var element = this.$refs[this.$route.name]
-               // var top = element.offsetTop
-
-               // window.scrollTo(0, top)
             } catch (err) {
                console.log(err)
             }

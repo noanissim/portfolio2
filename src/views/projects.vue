@@ -18,7 +18,6 @@ export default {
    },
    async created() {
       this.projects = await this.$store.dispatch('loadProjects')
-      console.log('created')
    },
    computed: {
 
