@@ -7,6 +7,7 @@ import projects from '../views/projects.vue'
 import contact from '../views/contact.vue'
 import appFooter from '../views/app-footer.vue'
 import tech from '../views/tech.vue'
+import info from '../views/info.vue'
 import cv from '../views/cv.vue'
 import resume from '../views/resume.vue'
 
@@ -47,6 +48,11 @@ const routes = [
             path: 'cv',
             name: 'cv',
             component: cv
+         },
+         {
+            path: 'info',
+            name: 'info',
+            component: info
          }
       ]
    },

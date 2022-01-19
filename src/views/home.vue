@@ -3,6 +3,7 @@
       <about @btnClicked="handleLink($event)" ref="about"></about>
       <projects ref="projects"></projects>
       <tech ref="tech"></tech>
+      <info ref="info"></info>
       <contact ref="contact"></contact>
       <cv ref="cv"></cv>
       <appFooter ref="appFooter"></appFooter>
@@ -16,6 +17,7 @@ import projects from './projects.vue'
 import tech from './tech.vue'
 import contact from './contact.vue'
 import cv from './cv.vue'
+import info from './info.vue'
 export default {
    name: 'Home',
    props: ['link'],
@@ -25,7 +27,8 @@ export default {
       projects,
       tech,
       contact,
-      cv
+      cv,
+      info
    },
    created() {
 

@@ -8,6 +8,7 @@
    position: relative;
    .about-section-info {
       .btn {
+         margin-top: 10px;
          background-color: rgba(255, 255, 255, 0.555);
          &:hover {
             background-color: #cbf3fd;
@@ -32,7 +33,7 @@
          white-space: nowrap; /* Keeps the content on a single line */
          margin: 0 auto 5px; /* Gives that scrolling effect as the typing happens */
          letter-spacing: 0.15em; /* Adjust as needed */
-         animation: typing 2.5s steps(40, end), blink-caret 1s step-end infinite;
+         animation: typing 2.5s steps(40, end), blink-caret 1s step-end 4;
       }
       h2 {
          color: rgb(66, 66, 66);
@@ -42,10 +43,13 @@
          line-height: 1.2;
          overflow: hidden; /* Ensures the content is not revealed until the animation */
          border-right: 0.15em solid #82b1ff; /* The typwriter cursor */
-         white-space: normal; /* Keeps the content on a single line */
+         white-space: nowrap; /* Keeps the content on a single line */
          margin: 0 auto 5px; /* Gives that scrolling effect as the typing happens */
          letter-spacing: 0.15em; /* Adjust as needed */
-         animation: typing 2.5s steps(40, end), blink-caret 1s step-end infinite;
+         animation: typing 2.5s steps(40, end), blink-caret 1s step-end 4;
+         @media screen and (max-width: 560px) {
+            white-space: normal; /* Keeps the content on a single line */
+         }
       }
 
       /* The typing effect */

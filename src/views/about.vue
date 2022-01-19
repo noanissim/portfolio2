@@ -2,7 +2,7 @@
    <div class="about-section">
       <div class="about-section-info">
          <h1>Noa Nissim.</h1>
-         <h2><span>Fullstack web</span> developer.</h2>
+         <h2>Fullstack web developer.</h2>
          <v-btn
             elevation="15"
             x-large

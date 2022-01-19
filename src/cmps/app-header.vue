@@ -8,23 +8,57 @@
          />
          <v-spacer></v-spacer>
          <div v-if="!isMobile">
-            <v-btn id="about" @click="linkClicked('about')" text>
+            <!-- <v-btn
+               :class="{ active: navLinks[0].isActive }"
+               id="about"
+               @click="linkClicked('about')"
+               text
+            >
                <span class="mr-2">Home</span>
-            </v-btn>
+            </v-btn> -->
 
-            <v-btn id="projects" @click="linkClicked('projects')" text>
+            <v-btn
+               :class="{ active: navLinks[0].isActive }"
+               id="projects"
+               @click="linkClicked('projects')"
+               text
+            >
                <span class="mr-2">Projects</span>
             </v-btn>
 
-            <v-btn id="tech" @click="linkClicked('tech')" text>
+            <v-btn
+               :class="{ active: navLinks[1].isActive }"
+               id="tech"
+               @click="linkClicked('tech')"
+               text
+            >
                <span class="mr-2">Tech</span>
             </v-btn>
 
-            <v-btn id="contact" @click="linkClicked('contact')" text>
+            <v-btn
+               :class="{ active: navLinks[2].isActive }"
+               id="info"
+               @click="linkClicked('info')"
+               text
+            >
+               <span class="mr-2">About</span>
+            </v-btn>
+
+            <v-btn
+               :class="{ active: navLinks[3].isActive }"
+               id="contact"
+               @click="linkClicked('contact')"
+               text
+            >
                <span class="mr-2">Contact</span>
             </v-btn>
 
-            <v-btn id="cv" @click="linkClicked('cv')" text>
+            <v-btn
+               :class="{ active: navLinks[4].isActive }"
+               id="cv"
+               @click="linkClicked('cv')"
+               text
+            >
                <span class="mr-2">CV</span>
             </v-btn>
          </div>
@@ -59,25 +93,35 @@ export default {
       return {
          isMobile: false,
          navLinks: [
-            {
-               name: 'Home',
-               link: 'about'
-            },
+            // {
+            //    name: 'Home',
+            //    link: 'about',
+            //    isActive: false,
+            // },
             {
                name: 'Projects',
-               link: 'projects'
+               link: 'projects',
+               isActive: false,
             },
             {
                name: 'Technologies',
-               link: 'tech'
+               link: 'tech',
+               isActive: false,
+            },
+            {
+               name: 'About',
+               link: 'info',
+               isActive: false,
             },
             {
                name: 'Contact',
-               link: 'contact'
+               link: 'contact',
+               isActive: false,
             },
             {
                name: 'CV',
-               link: 'cv'
+               link: 'cv',
+               isActive: false,
             }
          ]
       }
@@ -90,6 +134,10 @@ export default {
    methods: {
       linkClicked(link) {
          this.$emit('scrollToMe', link)
+         this.navLinks.forEach(obj => {
+            if (obj.link !== link) obj.isActive = false
+            else obj.isActive = true
+         })
       },
       onResize() {
          this.isMobile = window.innerWidth < 650

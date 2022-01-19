@@ -64,7 +64,9 @@
          </validation-provider>
 
          <div class="btn-section">
-            <v-btn type="submit" :disabled="invalid"> submit </v-btn>
+            <v-btn type="submit" :disabled="invalid" @click="handleClick">
+               submit
+            </v-btn>
             <v-btn @click="clear"> clear </v-btn>
          </div>
       </form>
@@ -131,10 +133,19 @@ export default {
       timeout: 10000,
    }),
    created() {
+      // this.clear()
+   },
+   destroyed() {
       this.clear()
    },
 
    methods: {
+      handleClick() {
+         console.log('clicked')
+         setTimeout(() => {
+            this.clear()
+         }, 500)
+      },
       submit() {
          // this.$refs.observer.validate() //using https://formspree.io/forms so it's not relavent
          this.clear()
@@ -146,7 +157,7 @@ export default {
          this.phoneNumber = ''
          this.email = ''
          this.message = ''
-         //  this.$refs.observer.reset()
+         this.$refs.observer.reset()
       },
    },
 }

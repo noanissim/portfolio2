@@ -4,4 +4,9 @@
       width: 130px;
       cursor: pointer;
    }
+
+   .active {
+      border-bottom: 4px solid #88abec;
+      border-radius: 0;
+   }
 }

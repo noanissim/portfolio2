@@ -6,6 +6,7 @@
    >
       <v-img
          height="250"
+         class="project-img"
          :src="require(`../assets/img/projects/${this.project.imgUrl}`)"
       ></v-img>
 

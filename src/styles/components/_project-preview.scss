@@ -1,4 +1,7 @@
 .project-preview-container {
+   .project-img {
+      border-bottom: 1px solid rgb(209, 209, 209);
+   }
    .project-title,
    .project-title-actions {
       display: flex;
@@ -15,9 +18,12 @@
    }
 
    .project-desc-ul {
-      padding-left: 5px;
+      padding-left: 15px;
       list-style: disc;
       text-align: start;
+      > * {
+         // width: 42ch;
+      }
    }
 
    .project-actions,
