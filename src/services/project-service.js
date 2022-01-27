@@ -76,8 +76,8 @@ async function getProjects() {
          name: 'SpaceX',
          imgUrl: 'spacex1.png',
          links: [
-            { name: 'github', link: 'https://github.com/noanissim/mister-bitcoin-angular' },
-            { name: 'live', link: 'https://noanissim.github.io/mister-bitcoin-angular/#/' }
+            { name: 'github', link: 'https://github.com/noanissim/space-project-react' },
+            { name: 'live', link: 'https://noanissim.github.io/space-project-react/#/' }
          ],
          desc: [
             {
